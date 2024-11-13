@@ -4,19 +4,33 @@
 
 <!--This section contains meta-information about the document, such as - title, character encoding, links to external resources etc.-->
 <head>
+    <!--Telling google to fuck off-->
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
+    
     <title>Chromy's Cool ass fuck website'</title>
-    <link rel="icon" type="image/x-icon" href="img/icon.ico" />
+    <link rel="icon" type="image/x-icon" href="img\icon.ico" />
     <style>
-        h1 {text-align:center;}
-        h1 {font-size: 300%;}
-        body {
-            background-color: darkcyan;
-        }
-
-        .white-text {
+        .tittle {
+            position: relative;
+            overflow: hidden;
+            padding: 15px;
+            top: -35px;
+            background-color:rgb(0, 85, 134);
+            text-align:center; 
+            font-size: 300%;
             color:white;
+        }
+        .nav {
+            overflow: hidden;
+            position:absolute;
+            left: 42.5%;
+            font-size: 150%; 
+            color:white;
+        }
+        body {
+            margin: 0;
+            background-color: darkcyan;
         }
     </style>
 </head>
@@ -24,20 +38,25 @@
 <!--This section contains the main content for the document or webpage, including text, images, multimedia elements, and structural elements like headings, paragraphs, lists, etc.-->
 <body>
     <header>
-        <h1 class="white-text">Hai World :3c</h1>
+        <h1 class="tittle" id="heady"><b>Hai World :3c</b></h1>
     </header>
 
     <nav>
-        <a href="nav/test.html">
-            Test lol
-        </a>
-        <a href="nav/test2.html">
-            Test 2 lol
-        </a>
+        <div class="nav">
+            <a href="nav/test.html">
+                Test lol
+            </a>
+            <a href="nav/test2.html">
+                Test 2 lol
+            </a>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=0Ta1x22cCNo0QSOE">
+                rick roll
+            </a>
+        </div>
     </nav>
 
     <section>
-        <h2 class="white-text">IMPORTANT!</h2>
+        <h2 class="white-text"><strong>IMPORTANT!</strong></h2>
         <p>
             bwaaaaa :3
         </p>
@@ -47,6 +66,15 @@
 </html>
 
 <script>
-    
-
+    let x = 15;
+    var heade = document.getElementById("heady");
+    document.addEventListener("keydown", function(keek){
+        if(keek.keyCode == 87){
+            x +=1;
+        }
+        else if (keek.keyCode == 83){
+            x -=1;
+        }
+        heade.style.padding = `${x}px`;
+    });
 </script>
